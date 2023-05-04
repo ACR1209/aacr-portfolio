@@ -42,8 +42,9 @@ function Projects() {
 
         <div className="p-5 flex flex-wrap">
             {
-                projects.map(p => (
+                projects.map((p,i) => (
                     <Proyect
+                        key={`p-${i}`}
                         {...p}
                     />
                 ))

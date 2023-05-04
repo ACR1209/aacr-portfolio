@@ -55,8 +55,8 @@ function Skills() {
 
       <div className="flex flex-wrap w-full bg-black text-offWhite">
         {
-            skills.map(s=>(
-                <Skill {...s}/>
+            skills.map((s,i)=>(
+                <Skill key={`p-${i}`} {...s}/>
             ))
         }
       </div>

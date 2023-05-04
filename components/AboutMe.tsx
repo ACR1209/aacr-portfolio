@@ -11,7 +11,7 @@ function AboutMe() {
         >
           About Me.
         </h2>
-        <p className="text-justify">
+        <p className="text-justify xl:text-xl xl:mt-5">
           I am a software developer who is deeply passionate about learning,
           expanding my network, and constantly improving. Although I am
           currently residing in Ecuador, I was born in Venezuela and I’m half

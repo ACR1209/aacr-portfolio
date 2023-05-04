@@ -15,7 +15,7 @@ function Skill({
         <p>0{index}</p>
         <h3>{title}</h3>
       </div>
-      <p className="text-lg md:text-sm text-justify mt-3">{description}</p>
+      <p className="text-lg xl:text-xl text-justify mt-3">{description}</p>
     </div>
   );
 }

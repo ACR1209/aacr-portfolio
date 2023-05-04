@@ -1,6 +1,8 @@
 import { firaCodeFont } from "@/utils/fonts";
 import React, { useState } from "react";
 import axios from "axios";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import Link from "next/link";
 
 type ContactInfo = {
   name: string;
@@ -28,7 +30,7 @@ function Contact() {
   const [hasBeenAltered, setHasBeenAltered] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
 
   function handleContact(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -42,7 +44,7 @@ function Contact() {
       return;
     }
 
-    setLoading(true)
+    setLoading(true);
     axios
       .post("/api/email", contact)
       .then(() => {
@@ -55,9 +57,9 @@ function Contact() {
           name: "",
           message: "",
           email: "",
-        })
+        });
 
-        setHasBeenAltered(false)
+        setHasBeenAltered(false);
       })
       .catch((err) => {
         setError(true);
@@ -65,8 +67,8 @@ function Contact() {
           setError(false);
         }, 3000);
       })
-      .finally(()=>{
-        setLoading(false)
+      .finally(() => {
+        setLoading(false);
       });
   }
 
@@ -134,9 +136,27 @@ function Contact() {
       id="contact"
       className={`${firaCodeFont.className} text-offWhite bg-black p-5`}
     >
-      <h2 className="text-5xl text-left  lg:text-8xl uppercase font-bold ">
-        Contact me.
-      </h2>
+      <div className="flex flex-col md:flex-row justify-between items-center">
+        <h2 className="text-5xl text-left  lg:text-8xl uppercase font-bold ">
+          Contact me.
+        </h2>
+        <div className="flex space-x-3 text-4xl">
+          <Link
+            href="https://github.com/ACR1209"
+            target="_blank"
+            className="hover:text-gray-300 transition-all hover:scale-110"
+          >
+            <AiFillGithub />
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/andres-alejandro-coronel-rodrigues-7a4a4626a/"
+            target="_blank"
+            className="hover:text-gray-300 transition-all hover:scale-110"
+          >
+            <AiFillLinkedin />
+          </Link>
+        </div>
+      </div>
       <div className="relative">
         <form onSubmit={handleContact} className="mt-5">
           <div className="flex flex-col mb-5">
@@ -227,7 +247,10 @@ function Contact() {
             </div>
           )}
           {error && (
-            <div id="error" className="bg-red-600 p-2 w-9/12 md:w-full  text-offWhite">
+            <div
+              id="error"
+              className="bg-red-600 p-2 w-9/12 md:w-full  text-offWhite"
+            >
               There was an error sending the message!
             </div>
           )}

@@ -23,8 +23,8 @@ function Proyect({title, imgSrc, liveSrc, description}: Proyect) {
         </div>
 
         <div className='group-hover:flex justify-center items-center flex-col hidden  text-offWhite absolute left-0 top-0  bg-[rgba(0,0,0,0.8)] w-full h-full '>
-            <p className='w-1/2 text-justify'>{description}</p>
-            <a className='border-white border-2 p-2 hover:bg-white hover:text-black mt-5' href={liveSrc} target="_blank">Live Site</a>
+            <p className='w-1/2 text-justify xl:text-xl'>{description}</p>
+            <a className='border-white border-2 p-2 xl:text-xl hover:bg-white hover:text-black mt-5' href={liveSrc} target="_blank">Live Site</a>
         </div>
     </div>
   )

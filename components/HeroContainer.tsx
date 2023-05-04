@@ -8,12 +8,12 @@ function HeroContainer() {
     <section id='start' className="bg-black text-white flex-col md:flex-row h-screen md:w-full flex justify-end md:justify-normal items-center">
       <div className={`${firaCodeFont.className} p-5 w-full md:w-7/12`}>
         <div className="text-xl md:text-3xl lg:text-[2.5rem] lg:leading-[3rem] xl:text-5xl whitespace-nowrap font-bold">
-          <h1>Hello. I'm Andrés Coronel.</h1>
+          <h1>Hello. I&apos;m Andrés Coronel.</h1>
           <h1>A Full Stack Web Developer</h1>
         </div>
         <p className="text-sm md:text-base xl:text-xl w-9/12">
           Enthusiastic software engineer, with an eye to detail and the ability
-          to build what you want. I'm also a designer.
+          to build what you want. I&apos;m also a designer.
         </p>
       </div>
 
