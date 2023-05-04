@@ -74,6 +74,7 @@ function Navbar() {
                   smooth={true}
                   duration={500}
                   offset={-navbarHeight}
+                  onClick={()=>toggleSidebar()}
                 >
                   About Me
                 </ScrollLink>
@@ -84,6 +85,7 @@ function Navbar() {
                   smooth={true}
                   duration={500}
                   offset={-navbarHeight}
+                  onClick={()=>toggleSidebar()}
                 >
                   Skills
                 </ScrollLink>
@@ -94,6 +96,7 @@ function Navbar() {
                   smooth={true}
                   duration={500}
                   offset={-navbarHeight}
+                  onClick={()=>toggleSidebar()}
                 >
                   Projects
                 </ScrollLink>
@@ -104,6 +107,7 @@ function Navbar() {
                   smooth={true}
                   duration={500}
                   offset={-navbarHeight}
+                  onClick={()=>toggleSidebar()}
                 >
                   Remarks
                 </ScrollLink>
@@ -113,6 +117,7 @@ function Navbar() {
                   href="/AndresCoronel_CV.pdf"
                   className="flex justify-center items-center"
                   download
+                  onClick={()=>toggleSidebar()}
                 >
                   <AiOutlineDownload className="mr-2" />
                   CV
@@ -124,6 +129,7 @@ function Navbar() {
               smooth={true}
               duration={500}
               offset={-navbarHeight}
+              onClick={()=>toggleSidebar()}
             >
               <button
                 className="bg-black hover:text-black text-offWhite hover:bg-offWhite transition-all   p-2 font-bold"
