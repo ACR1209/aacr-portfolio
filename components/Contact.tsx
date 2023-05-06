@@ -1,8 +1,9 @@
 import { firaCodeFont } from "@/utils/fonts";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import axios from "axios";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import Link from "next/link";
+import { LocaleContext } from "@/pages";
 
 type ContactInfo = {
   name: string;
@@ -130,6 +131,7 @@ function Contact() {
   }
 
   const errorStyle = "border-2 border-red-500";
+  const {translation} = useContext(LocaleContext)
 
   return (
     <section
@@ -138,7 +140,7 @@ function Contact() {
     >
       <div className="flex flex-col md:flex-row justify-between items-center">
         <h2 className="text-5xl text-left  lg:text-8xl uppercase font-bold ">
-          Contact me.
+        {translation?.contat_me_title}
         </h2>
         <div className="flex space-x-3 text-4xl">
           <Link
@@ -161,7 +163,7 @@ function Contact() {
         <form onSubmit={handleContact} className="mt-5">
           <div className="flex flex-col mb-5">
             <label htmlFor="name" className="text-lg font-bold mb-1">
-              Name
+            {translation?.name}
             </label>
             <input
               type="text"
@@ -176,13 +178,13 @@ function Contact() {
 
             {contactError.name && (
               <p className="text-red-600 font-bold">
-                Please, fill out your name.
+                {translation?.name_error}
               </p>
             )}
           </div>
           <div className="flex flex-col mb-5">
             <label htmlFor="email" className="text-lg font-bold mb-1">
-              Email
+            {translation?.email}
             </label>
             <input
               type="email"
@@ -197,14 +199,14 @@ function Contact() {
 
             {contactError.email && (
               <p className="text-red-600 font-bold">
-                Please, fill out your email.
+                {translation?.email_error}
               </p>
             )}
           </div>
 
           <div className="flex flex-col">
             <label htmlFor="name" className="text-lg font-bold mb-1">
-              Message
+            {translation?.message}
             </label>
             <textarea
               rows={5}
@@ -219,7 +221,7 @@ function Contact() {
 
             {contactError.message && (
               <p className="text-red-600 font-bold">
-                Please, fill out a message for me.
+                {translation?.message_error}
               </p>
             )}
           </div>
@@ -227,7 +229,7 @@ function Contact() {
             <input
               type="submit"
               className="disabled:bg-red-600 disabled:text-offWhite bg-offWhite hover:bg-blackPortfolio hover:text-offWhite transition-all  cursor-pointer mt-5 px-5 py-2 text-blackPortfolio"
-              value="Send"
+              value={translation?.send}
               disabled={
                 loading ||
                 !hasBeenAltered ||
@@ -243,7 +245,7 @@ function Contact() {
               id="success"
               className="bg-green-600 p-2 w-9/12 md:w-full  text-offWhite"
             >
-              Message sent succesfully!
+              {translation?.message_sent}
             </div>
           )}
           {error && (
@@ -251,7 +253,7 @@ function Contact() {
               id="error"
               className="bg-red-600 p-2 w-9/12 md:w-full  text-offWhite"
             >
-              There was an error sending the message!
+              {translation?.message_sent_error}
             </div>
           )}
         </div>

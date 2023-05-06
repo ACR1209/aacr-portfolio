@@ -1,16 +1,18 @@
 import { adaminaFont, firaCodeFont } from "@/utils/fonts";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import Navlink from "./Navlink";
 import { AiOutlineDownload, AiOutlineClose } from "react-icons/ai";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { useRouter } from "next/router";
 import { Link as ScrollLink } from "react-scroll";
+import { LocaleContext } from "@/pages";
+import Image from 'next/image'
+
+
 
 const navbarHeight = 80; // Replace with your actual navbar height
 
 function Navbar() {
-  const router = useRouter();
-
+  const { locale, setLocale, translation } = useContext(LocaleContext);
   const [scroll, setScroll] = useState(false);
   const [showSidebar, setShowSidebar] = useState(false);
 
@@ -33,6 +35,15 @@ function Navbar() {
     setShowSidebar(!showSidebar);
   };
 
+  function cycleLocale(): void {
+    const locales: string[] = ["en", "es", "pt"];
+
+    const nextLocale: string =
+      locales[(locales.indexOf(locale) + 1) % locales.length];
+
+    setLocale(nextLocale);
+  }
+
   return (
     <nav
       className={`${adaminaFont.className} ${
@@ -47,6 +58,21 @@ function Navbar() {
       >
         <p className="text-5xl cursor-pointer select-none">AC</p>
       </ScrollLink>
+<div className="flex items-center justify-center space-x-5">
+
+      <button className={`${firaCodeFont.className} ${
+            scroll ? "text-blackPortfolio" : "text-white"
+          } text-lg  md:hidden ${!showSidebar ? "flex  items-center justify-center" : "hidden"}`} onClick={() => cycleLocale()}>
+          <Image
+          width={40}
+          height={40}
+          
+          className="mr-1 h-[30px] w-[30px] "
+          src={`/${locale}_icon.png`}
+          alt={`${locale} flag`}
+          />
+          {locale}
+        </button>
 
       <GiHamburgerMenu
         className={`${
@@ -54,6 +80,7 @@ function Navbar() {
         } text-3xl md:hidden ${!showSidebar ? "flex" : "hidden"}`}
         onClick={() => toggleSidebar()}
       />
+</div>
       <div
         className={`${
           showSidebar ? "flex" : "hidden"
@@ -64,9 +91,7 @@ function Navbar() {
             className="absolute text-4xl top-5 text-blackPortfolio right-5"
             onClick={() => toggleSidebar()}
           />
-          <div
-            className={`${firaCodeFont.className} p-5 pt-20 flex flex-col `}
-          >
+          <div className={`${firaCodeFont.className} p-5 pt-20 flex flex-col `}>
             <ul className="flex flex-col space-y-5 mb-5  text-black mr-10">
               <Navlink>
                 <ScrollLink
@@ -74,9 +99,9 @@ function Navbar() {
                   smooth={true}
                   duration={500}
                   offset={-navbarHeight}
-                  onClick={()=>toggleSidebar()}
+                  onClick={() => toggleSidebar()}
                 >
-                  About Me
+                  {translation?.about_me}
                 </ScrollLink>
               </Navlink>
               <Navlink>
@@ -85,9 +110,9 @@ function Navbar() {
                   smooth={true}
                   duration={500}
                   offset={-navbarHeight}
-                  onClick={()=>toggleSidebar()}
+                  onClick={() => toggleSidebar()}
                 >
-                  Skills
+                  {translation?.skills}
                 </ScrollLink>
               </Navlink>
               <Navlink>
@@ -96,9 +121,9 @@ function Navbar() {
                   smooth={true}
                   duration={500}
                   offset={-navbarHeight}
-                  onClick={()=>toggleSidebar()}
+                  onClick={() => toggleSidebar()}
                 >
-                  Projects
+                  {translation?.projects}
                 </ScrollLink>
               </Navlink>
               <Navlink>
@@ -107,9 +132,9 @@ function Navbar() {
                   smooth={true}
                   duration={500}
                   offset={-navbarHeight}
-                  onClick={()=>toggleSidebar()}
+                  onClick={() => toggleSidebar()}
                 >
-                  Remarks
+                  {translation?.remarks}
                 </ScrollLink>
               </Navlink>
               <Navlink>
@@ -117,7 +142,7 @@ function Navbar() {
                   href="/AndresCoronel_CV.pdf"
                   className="flex justify-center items-center"
                   download
-                  onClick={()=>toggleSidebar()}
+                  onClick={() => toggleSidebar()}
                 >
                   <AiOutlineDownload className="mr-2" />
                   CV
@@ -129,12 +154,10 @@ function Navbar() {
               smooth={true}
               duration={500}
               offset={-navbarHeight}
-              onClick={()=>toggleSidebar()}
+              onClick={() => toggleSidebar()}
             >
-              <button
-                className="bg-black hover:text-black text-offWhite hover:bg-offWhite transition-all   p-2 font-bold"
-              >
-                CONTACT ME
+              <button className="bg-black hover:text-black text-offWhite hover:bg-offWhite transition-all   p-2 font-bold">
+              {translation?.contact_me}
               </button>
             </ScrollLink>
           </div>
@@ -150,7 +173,7 @@ function Navbar() {
               duration={500}
               offset={-navbarHeight}
             >
-              About Me
+              {translation?.about_me}
             </ScrollLink>
           </Navlink>
           <Navlink>
@@ -160,7 +183,7 @@ function Navbar() {
               duration={500}
               offset={-navbarHeight}
             >
-              Skills
+              {translation?.skills}
             </ScrollLink>
           </Navlink>
           <Navlink>
@@ -170,7 +193,7 @@ function Navbar() {
               duration={500}
               offset={-navbarHeight}
             >
-              Projects
+              {translation?.projects}
             </ScrollLink>
           </Navlink>
           <Navlink>
@@ -180,7 +203,7 @@ function Navbar() {
               duration={500}
               offset={-navbarHeight}
             >
-              Remarks
+              {translation?.remarks}
             </ScrollLink>
           </Navlink>
           <Navlink>
@@ -194,6 +217,17 @@ function Navbar() {
             </a>
           </Navlink>
         </ul>
+
+        <button className="mr-5" onClick={() => cycleLocale()}>
+          <Image
+          width={40}
+          height={40}
+          className="h-[30px] w-[30px] "
+          src={`/${locale}_icon.png`}
+          alt={`${locale} flag`}
+          />
+          {locale}
+        </button>
         <ScrollLink
           to="contact"
           smooth={true}
@@ -207,7 +241,7 @@ function Navbar() {
                 : "bg-offWhite hover:text-white text-black hover:bg-black"
             }  transition-all   p-2 font-bold`}
           >
-            CONTACT ME
+            {translation?.contact_me}
           </button>
         </ScrollLink>
       </div>

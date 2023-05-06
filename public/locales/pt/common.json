@@ -1,0 +1,85 @@
+{
+  "main_title1": "Olá. Eu sou Andrés Coronel.",
+  "main_title2": "Um Desenvolvedor Full Stack",
+  "main_description": "Engenheiro de software entusiasta, com um olho para detalhes e habilidade para construir o que você deseja. Também sou um analista de dados e designer.",
+  "contact_me": "CONTATO",
+  "about_me": "Sobre Mim",
+  "skills": "Habilidades",
+  "projects": "Projetos",
+  "remarks": "Observações",
+  "projects_title": "Projetos.",
+  "skills_title": "Principais Habilidades",
+  "about_me_title": "Sobre Mim.",
+  "remarks_title": "Observações",
+  "contat_me_title": "Contato.",
+  "see_more": "Quer ver mais?",
+  "about_me_content": "Sou um desenvolvedor de software apaixonado por aprender, expandir minha rede e melhorar constantemente. Embora atualmente eu resida no Equador, nasci na Venezuela e sou metade português. Meu objetivo é buscar constantemente o crescimento pessoal e garantir que eu seja uma versão melhor de mim mesmo no final de cada dia. Mantenho uma mente aberta, sempre ansioso para adquirir novos conhecimentos e habilidades.",
+  "projects_content": [
+    {
+      "title": "Página de destino Webnews",
+      "imgSrc": "/website1.png",
+      "liveSrc": "https://news-page-frontend-mentor.vercel.app",
+      "description": "Este é um dos meus desafios do Frontend Mentor. É um site estático simples para testar minhas habilidades de layout."
+    },
+    {
+      "title": "Página informativa de cursos",
+      "imgSrc": "/website2.png",
+      "liveSrc": "https://praxis-web-page.vercel.app",
+      "description": "Construí e implementei um aplicativo NextJS usando prisma para uma página informativa de cursos."
+    }
+  ],
+  "skills_content": [
+    {
+      "index": 1,
+      "title": "Python",
+      "description": "Minha primeira linguagem (mais de 4 anos de uso), posso construir APIs, aplicativos desktop, machine learning e exploração de dados usando ela."
+    },
+    {
+      "index": 2,
+      "title": "Next.JS",
+      "description": "Tenho experiência com React e Next.JS para construir sites bonitos. Usei Prisma para permitir sites dinâmicos."
+    },
+    {
+      "index": 3,
+      "title": "Tailwind",
+      "description": "Minha maneira favorita de fazer estilos permitindo um trabalho rápido de CSS. Também usei CSS padrão, Styled Components, Bootstrap e SASS."
+    },
+    {
+      "index": 4,
+      "title": "Design",
+      "description": "Trabalhei como designer por 3 anos, permitindo espalhar informações e ideias por meio de componentes visuais. Experiência com Figma, Adobe Illustrator e Adobe Photoshop."
+    },
+    {
+      "index": 5,
+      "title": "Abertura",
+      "description": "Sou uma pessoa aberta que pode aprender o que for necessário para resolver um problema. Dando o meu melhor para realizar tudo o que me proponho a fazer."
+    },
+    {
+      "index": 6,
+      "title": "Comunicação",
+      "description": "Sou capaz de expressar ideias complexas em palavras simples. Também falo inglês, espanhol e português."
+    }
+  ],
+  "remarks_content": [
+    {
+      "title": "SEGUNDO LUGAR NO DESAFIO DE CÓDIGO 2023",
+      "description": "Como parte de uma equipe colaborativa, contribuí para o desenvolvimento de um serviço da web com inteligência artificial voltado para o setor financeiro. Utilizando NextJS e FastAPI, fomos capazes de criar uma solução totalmente funcional dentro de um prazo apertado de apenas um dia. Nosso esforço excepcional e abordagem inovadora nos levaram a garantir o segundo lugar em uma competição altamente competitiva de desenvolvimento de software.",
+      "imgSrc": "/remark1.jpeg"
+    },
+    {
+      "title": "Certificado de Análise de Dados do Google",
+      "description": "Concluí com sucesso o curso de Análise de Dados do Google, onde aprimorei minhas habilidades em análise de dados, com foco específico em SQL, R, Excel e Tableau. Como parte do projeto final do curso, conduzi uma análise minuciosa da progressão de poder no Terraria, um jogo popular.",
+      "imgSrc": "/remark2.jpeg"
+    }
+  ],
+
+  "name": "Nome",
+  "email": "E-mail",
+  "message": "Mensagem",
+  "send": "Enviar",
+  "name_error": "Por favor, preencha o seu nome.",
+  "email_error": "Por favor, preencha o seu email.",
+  "message_error": "Por favor, preencha a sua mensagem.",
+  "message_sent": "Mensagem enviada com sucesso!",
+  "message_sent_error": "Houve um erro ao enviar a mensagem!"
+}
