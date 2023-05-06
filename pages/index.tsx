@@ -31,9 +31,13 @@ export default function Home() {
   const [locale, setLocale] = useState("en");
   const [translation, setTranslation] = useState<Translation>()
   
-  
-  
 
+  useEffect(() => {
+    const language = navigator.language?.slice(0,2)
+    console.log(language)
+    setLocale(["en", "es", "pt"].indexOf(language) === -1 ? "en" : language )
+  }, [])
+  
   async function getTranslation(){
     type Translations = { [locale: string]: Translation };
     const t: Translations = {
