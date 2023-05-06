@@ -34,7 +34,6 @@ export default function Home() {
 
   useEffect(() => {
     const language = navigator.language?.slice(0,2)
-    console.log(language)
     setLocale(["en", "es", "pt"].indexOf(language) === -1 ? "en" : language )
   }, [])
   
