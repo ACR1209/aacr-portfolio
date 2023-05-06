@@ -31,9 +31,7 @@ export default function Home() {
   const [locale, setLocale] = useState("en");
   const [translation, setTranslation] = useState<Translation>()
   
-  useEffect(() => {
-    getTranslation()
-  }, [locale])
+  
   
 
   async function getTranslation(){
@@ -48,6 +46,9 @@ export default function Home() {
     setTranslation(data);
   }
 
+  useEffect(() => {
+    getTranslation()
+  }, [locale])
   return (
     <>
       <Head>
