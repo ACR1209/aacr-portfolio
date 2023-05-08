@@ -5,9 +5,7 @@ import { AiOutlineDownload, AiOutlineClose } from "react-icons/ai";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link as ScrollLink } from "react-scroll";
 import { LocaleContext } from "@/pages";
-import Image from 'next/image'
-
-
+import Image from "next/image";
 
 const navbarHeight = 80; // Replace with your actual navbar height
 
@@ -58,29 +56,32 @@ function Navbar() {
       >
         <p className="text-5xl cursor-pointer select-none">AC</p>
       </ScrollLink>
-<div className="flex items-center justify-center space-x-5">
-
-      <button className={`${firaCodeFont.className} ${
+      <div className="flex items-center justify-center space-x-5">
+        <button
+          className={`${firaCodeFont.className} ${
             scroll ? "text-blackPortfolio" : "text-white"
-          } text-lg  md:hidden ${!showSidebar ? "flex  items-center justify-center" : "hidden"}`} onClick={() => cycleLocale()}>
+          } text-lg  md:hidden ${
+            !showSidebar ? "flex  items-center justify-center" : "hidden"
+          }`}
+          onClick={() => cycleLocale()}
+        >
           <Image
-          width={40}
-          height={40}
-          
-          className="mr-1 h-[30px] w-[30px] "
-          src={`/${locale}_icon.png`}
-          alt={`${locale} flag`}
+            width={40}
+            height={40}
+            className="mr-1 h-[30px] w-[30px] "
+            src={`/${locale}_icon.png`}
+            alt={`${locale} flag`}
           />
           {locale}
         </button>
 
-      <GiHamburgerMenu
-        className={`${
-          scroll ? "text-blackPortfolio" : "text-white"
-        } text-3xl md:hidden ${!showSidebar ? "flex" : "hidden"}`}
-        onClick={() => toggleSidebar()}
-      />
-</div>
+        <GiHamburgerMenu
+          className={`${
+            scroll ? "text-blackPortfolio" : "text-white"
+          } text-3xl md:hidden ${!showSidebar ? "flex" : "hidden"}`}
+          onClick={() => toggleSidebar()}
+        />
+      </div>
       <div
         className={`${
           showSidebar ? "flex" : "hidden"
@@ -157,7 +158,7 @@ function Navbar() {
               onClick={() => toggleSidebar()}
             >
               <button className="bg-black hover:text-black text-offWhite hover:bg-offWhite transition-all   p-2 font-bold">
-              {translation?.contact_me}
+                {translation?.contact_me}
               </button>
             </ScrollLink>
           </div>
@@ -220,11 +221,11 @@ function Navbar() {
 
         <button className="mr-5" onClick={() => cycleLocale()}>
           <Image
-          width={40}
-          height={40}
-          className="h-[30px] w-[30px] "
-          src={`/${locale}_icon.png`}
-          alt={`${locale} flag`}
+            width={40}
+            height={40}
+            className="h-[30px] w-[30px] "
+            src={`/${locale}_icon.png`}
+            alt={`${locale} flag`}
           />
           {locale}
         </button>
