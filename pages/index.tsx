@@ -16,6 +16,7 @@ export default function Home() {
           name="description"
           content="The portfolio of Andres Coronel, a software engineer and a Full Stack Web dev, expert in reactjs, nextjs, python, data analysis."
         />
+        <meta name="google-site-verification" content="sbV-4Qu-16ZxBJzM0NM7rSGkxPcmgWlnnUAw2FP3CJ0" />
         <meta name="author" content="Andrés Coronel" />
         <meta
           name="keywords"
