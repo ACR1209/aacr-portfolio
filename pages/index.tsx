@@ -6,8 +6,52 @@ import Projects from "@/components/Projects";
 import Remarks from "@/components/Remarks";
 import Head from "next/head";
 import Contact from "@/components/Contact";
+import { createContext, useState, useEffect } from "react";
+import englishTranslation  from "../public/locales/en/common.json";
+import spanishTranslation from "../public/locales/es/common.json"
+import portugueseTranslation from "../public/locales/pt/common.json"
+import { Translation } from "@/utils/translation";
+
+interface LocaleContext {
+  locale: string;
+  setLocale: React.Dispatch<React.SetStateAction<string>>;
+  translation: Translation | undefined;
+  setTranslation: React.Dispatch<React.SetStateAction<Translation | undefined>>
+}
+const defaultLocale: LocaleContext = {
+  locale: "en",
+  setLocale: () => {},
+  translation: englishTranslation,
+  setTranslation: ()=>{}
+};
+
+export const LocaleContext = createContext(defaultLocale);
 
 export default function Home() {
+  const [locale, setLocale] = useState("en");
+  const [translation, setTranslation] = useState<Translation>()
+  
+
+  useEffect(() => {
+    const language = navigator.language?.slice(0,2)
+    setLocale(["en", "es", "pt"].indexOf(language) === -1 ? "en" : language )
+  }, [])
+  
+  async function getTranslation(){
+    type Translations = { [locale: string]: Translation };
+    const t: Translations = {
+      en: englishTranslation,
+      es: spanishTranslation,
+      pt: portugueseTranslation,
+    };
+    
+    const data: Translation = t[locale] || englishTranslation;
+    setTranslation(data);
+  }
+
+  useEffect(() => {
+    getTranslation()
+  }, [locale])
   return (
     <>
       <Head>
@@ -24,14 +68,17 @@ export default function Home() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
+
       <main className="relative">
-        <Navbar />
-        <HeroContainer />
-        <AboutMe />
-        <Skills />
-        <Projects />
-        <Remarks />
-        <Contact />
+        <LocaleContext.Provider value={{locale, setLocale, translation, setTranslation}}>
+          <Navbar />
+          <HeroContainer />
+          <AboutMe />
+          <Skills />
+          <Projects />
+          <Remarks />
+          <Contact />
+        </LocaleContext.Provider>
       </main>
     </>
   );

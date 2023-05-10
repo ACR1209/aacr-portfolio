@@ -1,0 +1,84 @@
+{
+    "main_title1": "Hello. I'm Andrés Coronel.",
+    "main_title2": "A Full Stack Web Developer",
+    "main_description": "Enthusiastic software engineer, with an eye to detail and the ability to build what you want. I'm also a data analyst and a designer.",
+    "contact_me": "CONTACT ME",
+    "about_me": "About Me",
+    "skills": "Skills",
+    "projects": "Projects",
+    "remarks": "Remarks",
+    "projects_title": "Projects.",
+    "skills_title": "Top Skills",
+    "about_me_title": "About Me.",
+    "remarks_title": "Remarks",
+    "contat_me_title": "Contact me.",
+    "see_more": "want to see more?",
+    "about_me_content": "I am a software developer who is deeply passionate about learning, expanding my network, and constantly improving. Although I am currently residing in Ecuador, I was born in Venezuela and I’m half Portuguese. My goal is to consistently strive for personal growth and ensure that I am a better version of myself by the end of each day. I maintain an open mindset, always eager to acquire new knowledge and skills.",
+    "projects_content": [
+        {
+        "title": "Webnews landing page",
+        "imgSrc": "/website1.png",
+        "liveSrc": "https://news-page-frontend-mentor.vercel.app",
+        "description": "This is one of my Frontend Mentor Challenges. Is a simple static website to test my layout abilities."
+        },
+        {
+            "title": "Courses Informational page",
+            "imgSrc": "/website2.png",
+            "liveSrc": "https://praxis-web-page.vercel.app",
+            "description": "I built and deployed a NextJS app using prisma for a courses informational page."
+        }
+    ],
+    "skills_content": [{
+        "index": 1,
+        "title": "Python",
+        "description": "My first language (over 4 years of using it), I can build APIs, desktop applications, machine learning and data exploration using it."
+    },
+    {
+        "index": 2,
+        "title": "Next.JS",
+        "description": "I'm experienced with React and Next.JS to build beautiful websites. I've used Prisma to allow for dynamic websites."
+    },
+    {
+        "index": 3,
+        "title": "Tailwind",
+        "description": "My favorite way of doing styles allowing for quick css work. I've also used Standard CSS, Styled Components, Bootstrap and SASS. "
+    },
+    {
+        "index": 4,
+        "title": "Design",
+        "description": "I've work as a designer for 3 years, allowing to spread information and ideas through visual components. Experience with Figma, Adobe Illustrator and Adobe Photoshop."
+    },
+    {
+        "index": 5,
+        "title": "Openess",
+        "description": "I'm an open individual that can learn whatever is needed to solve a problem. Giving it all to accomplish whatever I set my mind to."
+    },
+    {
+        "index": 6,
+        "title": "Communication",
+        "description": "I'm able to express complex ideas in simple words. I can also speak English, Spanish and Portuguese."
+    }],
+    "remarks_content": [
+        {
+            "title": "2ND PLACE ON CODE CHALLENGE 2023",
+            "description":
+              "As part of a collaborative team, I contributed to the development of an AI-powered web service targeting the financial sector. Utilizing NextJS and FastAPI, we were able to create a fully functional solution within a tight deadline of just one day. Our exceptional effort and innovative approach led us to secure the second place in a highly competitive software development competition.",
+            "imgSrc": "/remark1.jpeg"
+          },
+          {
+            "title": "Google Data Analytics Certificate",
+            "description":
+              "I successfully completed the Google Data Analytics course, where I honed my skills in data analysis, specifically focusing on SQL, R, Excel, and Tableau. As part of the course's capstone project, I conducted a thorough analysis of the power progression in Terraria, a popular game.",
+              "imgSrc": "/remark2.jpeg"
+          }
+    ],
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send",
+    "name_error": "Please, fill out your name.",
+    "email_error": "Please, fill out your email.",
+    "message_error": "Please, fill out your message.",
+    "message_sent": "Message sent succesfully!",
+    "message_sent_error": "There was an error sending the message!"
+}

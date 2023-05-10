@@ -1,0 +1,84 @@
+{
+  "main_title1": "Hola. Soy Andrés Coronel.",
+  "main_title2": "Un Desarrollador Full Stack",
+  "main_description": "Ingeniero de software entusiasta, con atención al detalle y habilidades para construir lo que deseas. También soy analista de datos y diseñador.",
+  "contact_me": "CONTÁCTAME",
+  "about_me": "Sobre mí",
+  "skills": "Habilidades",
+  "projects": "Proyectos",
+  "remarks": "Extras",
+  "projects_title": "Proyectos",
+  "skills_title": "Habilidades Principales",
+  "about_me_title": "Sobre mí",
+  "remarks_title": "Extras",
+  "contat_me_title": "Contáctame",
+  "see_more": "¿Quieres ver más?",
+  "about_me_content": "Soy un desarrollador de software que está profundamente apasionado por aprender, expandir mi red y mejorar constantemente. Aunque actualmente resido en Ecuador, nací en Venezuela y soy mitad portugués. Mi objetivo es esforzarme constantemente por el crecimiento personal y asegurarme de ser una mejor versión de mí mismo al final de cada día. Mantengo una mentalidad abierta, siempre ansioso por adquirir nuevos conocimientos y habilidades.",
+  "projects_content": [
+    {
+      "title": "Página de noticias web",
+      "imgSrc": "/website1.png",
+      "liveSrc": "https://news-page-frontend-mentor.vercel.app",
+      "description": "Este es uno de mis desafíos de Frontend Mentor. Es un sitio web estático simple para probar mis habilidades de diseño."
+    },
+    {
+      "title": "Página informativa de cursos",
+      "imgSrc": "/website2.png",
+      "liveSrc": "https://praxis-web-page.vercel.app",
+      "description": "Construí y desplegué una aplicación NextJS usando prisma para una página informativa de cursos."
+    }
+  ],
+  "skills_content": [
+    {
+      "index": 1,
+      "title": "Python",
+      "description": "Mi primer lenguaje de programación (más de 4 años de uso), puedo construir APIs, aplicaciones de escritorio, aprendizaje automático y exploración de datos usando Python."
+    },
+    {
+      "index": 2,
+      "title": "Next.JS",
+      "description": "Tengo experiencia con React y Next.JS para construir hermosos sitios web. He usado Prisma para permitir sitios web dinámicos."
+    },
+    {
+      "index": 3,
+      "title": "Tailwind",
+      "description": "Mi forma favorita de hacer estilos permitiendo hacer CSS de manera rápida. También he usado CSS estándar, Styled Components, Bootstrap y SASS."
+    },
+    {
+      "index": 4,
+      "title": "Diseño",
+      "description": "Trabajé como diseñador durante 3 años, lo que me permitió difundir información e ideas a través de componentes visuales. Experiencia con Figma, Adobe Illustrator y Adobe Photoshop."
+    },
+    {
+      "index": 5,
+      "title": "Abierto",
+      "description": "Soy una persona abierta que puede aprender lo que sea necesario para resolver un problema. Lo doy todo para lograr lo que me propongo."
+    },
+    {
+      "index": 6,
+      "title": "Comunicación",
+      "description": "Puedo expresar ideas complejas con palabras sencillas. También puedo hablar inglés, español y portugués."
+    }
+  ],
+  "remarks_content": [
+    {
+      "title": "2DO LUGAR EN EL DESAFÍO DE CÓDIGO 2023",
+      "description": "Como parte de un equipo colaborativo, contribuí al desarrollo de un servicio web impulsado por inteligencia artificial dirigido al sector financiero. Utilizando NextJS y FastAPI, pudimos crear una solución completamente funcional en un plazo ajustado de solo un día. Nuestro esfuerzo excepcional y enfoque innovador nos llevó a asegurar el segundo lugar en una competencia de desarrollo de software altamente competitiva.",
+      "imgSrc": "/remark1.jpeg"
+    },
+    {
+      "title": "Certificado de Google en Análisis de Datos",
+      "description": "Completé con éxito el curso de Análisis de Datos de Google, donde perfeccioné mis habilidades en análisis de datos, centrándome específicamente en SQL, R, Excel y Tableau. Como parte del proyecto final del curso, realicé un análisis exhaustivo de la progresión de poder en Terraria, un juego popular.",
+      "imgSrc": "/remark2.jpeg"
+    }
+  ],
+  "name": "Nombre",
+  "email": "Correo electrónico",
+  "message": "Mensaje",
+  "send": "Enviar",
+  "name_error": "Por favor, complete su nombre.",
+  "email_error": "Por favor, complete su correo electrónico.",
+  "message_error": "Por favor, complete su mensaje.",
+  "message_sent": "¡Mensaje enviado exitosamente!",
+  "message_sent_error": "¡Hubo un error al enviar el mensaje!"
+}
