@@ -26,6 +26,31 @@
             "imgSrc": "/website2.png",
             "liveSrc": "https://praxis-web-page.vercel.app",
             "description": "I built and deployed a NextJS app using prisma for a courses informational page."
+        },
+        {
+            "title": "Company Static Website",
+            "imgSrc": "/webpage3.png",
+            "liveSrc": "https://www.alturasoluciones.com",
+            "description": "I built and deployed a HTML, CSS and JavaScript app for Altura Soluciones."
+        },
+        {
+            "title": "Professors Review Website",
+            "imgSrc": "/grademic.png",
+            "liveSrc": "https://grademic.vercel.app",
+            "description": "I built and deployed a NextJS and PocketBase app that allows for making professors reviews in different universities."
+        },
+        
+        {
+            "title": "Quiz Simulator Website",
+            "imgSrc": "/simulator.png",
+            "liveSrc": "https://exam-acr1209.vercel.app",
+            "description": "I built and deployed a NextJS app to study for my certifation exam."
+        },
+        {
+            "title": "Steganography CLI",
+            "imgSrc": "/steganography.png",
+            "liveSrc": "https://github.com/ACR1209/rust-steganography",
+            "description": "I built a CLI app that allows for steganography using Rust."
         }
     ],
     "skills_content": [{

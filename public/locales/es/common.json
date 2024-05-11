@@ -26,6 +26,30 @@
       "imgSrc": "/website2.png",
       "liveSrc": "https://praxis-web-page.vercel.app",
       "description": "Construí y desplegué una aplicación NextJS usando prisma para una página informativa de cursos."
+    },
+    {
+      "title": "Sitio Web Estático Empresarial",
+      "imgSrc": "/webpage3.png",
+      "liveSrc": "https://www.alturasoluciones.com",
+      "description": "Construí y desplegué una aplicación HTML, CSS y JavaScript para Altura Soluciones."
+    },
+    {
+      "title": "Sitio Web de Reseñas de Profesores",
+      "imgSrc": "/grademic.png",
+      "liveSrc": "https://grademic.vercel.app",
+      "description": "Construí y desplegué una aplicación NextJS y PocketBase que permite hacer reseñas de profesores en diferentes universidades."
+    },
+    {
+      "title": "Simulador de Exámenes",
+      "imgSrc": "/simulator.png",
+      "liveSrc": "https://exam-acr1209.vercel.app",
+      "description": "Construí y desplegué una aplicación NextJS para estudiar para mi examen de certificación."
+    },
+    {
+      "title": "CLI de Esteganografía",
+      "imgSrc": "/steganography.png",
+      "liveSrc": "https://github.com/ACR1209/rust-steganography",
+      "description": "Construí una aplicación CLI que permite esteganografía usando Rust."
     }
   ],
   "skills_content": [
